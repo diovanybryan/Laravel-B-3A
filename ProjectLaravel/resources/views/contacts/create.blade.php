@@ -7,7 +7,7 @@
 	<h1>Contact Us</h1>
 	<br>
 
-	<form action="{{ URL::to('/savecontact') }}" method="post">
+	<form action="{{ URL::to('/savecontact') }}" method="post" autocomplete="off">
 
 		{!! csrf_field() !!}
 

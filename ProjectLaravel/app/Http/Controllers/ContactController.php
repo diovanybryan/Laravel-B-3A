@@ -10,32 +10,32 @@ use App\Contact;
 class ContactController extends Controller
 {
     public function Tampil() {
-    	$myUsers = Contact::all();
+    	$contacts = Contact::all();
 
-    	return view('users.show', [
-    		'myusers' => $myUsers
+    	return view('contacts.show', [
+    		'myusers' => $contacts
     	]);
     }
 
     public function Simpan(Request $request) {
 
-    	$myUser = new Contact();
+    	$contact = new Contact();
 
-    	$myUser->first_name = $request->first_name;
-    	$myUser->last_name = $request->last_name;
-    	$myUser->email = $request->email;
-    	$myUser->phone = $request->phone;
-    	$myUser->message = $request->message;
+    	$contact->first_name = $request->first_name;
+    	$contact->last_name = $request->last_name;
+    	$contact->email = $request->email;
+    	$contact->phone = $request->phone;
+    	$contact->message = $request->message;
 
-    	$myUser->save();
+    	$contact->save();
 
-    	return redirect()->Route('show');
+    	return redirect()->Route('showcontact');
     }
 
     public function Hapus($id) {
     	$model = Contact::find($id);
     	$model->delete();
 
-        return redirect()->Route('show');
+        return redirect()->Route('showcontact');
     }
 }
