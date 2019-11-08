@@ -2,12 +2,13 @@
 <html>
 <head>
 	<title>Show Contact</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 	<h1>Contact Us - Show Data</h1>
 	<br />
 
-	<table border="1">
+	<table class="table">
 		<tr>
 			<th>No.</th>
 			<th>First Name</th>

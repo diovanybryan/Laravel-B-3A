@@ -2,42 +2,37 @@
 <html>
 <head>
 	<title>Contact Us</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 	<h1>Contact Us</h1>
 	<br>
 
-	<form action="{{ URL::to('/savecontact') }}" method="post" autocomplete="off">
+	<form action="{{ URL::to('/savecontact') }}" method="post" autocomplete="off" style="background: #ddddbb">
 
 		{!! csrf_field() !!}
+		<div class="form-group" >
+			<label>First Name :</label>
+			<input type="text" name="first_name" class="form-control">
+		</div>
+<div class="form-group" >
+			<label>Last Name :</label>
+			<input type="text" name="last_name" class="form-control">
+		</div>
+<div class="form-group" >
+			<label>Email Address :</label>
+			<input type="email" name="email" class="form-control">
+		</div>
+<div class="form-group" >
+			<label>Tel. Number :</label>
+			<input type="text" name="phone" class="form-control">
+		</div>
+		<div class="form-group" >
+			<label>Message :</label>
+			<textarea name="message" class="form-control"></textarea>
 
-		<table>
-			<tr>
-				<td>First Name</td>
-				<td><input type="text" name="first_name"></td>
-			</tr>
-			<tr>
-				<td>Last Name</td>
-				<td><input type="text" name="last_name"></td>
-			</tr>
-			<tr>
-				<td>Email Address</td>
-				<td><input type="email" name="email"></td>
-			</tr>
-			<tr>
-				<td>Tel. Number</td>
-				<td><input type="text" name="phone"></td>
-			</tr>
-			<tr>
-				<td>Message</td>
-				<td><textarea name="message"></textarea></td>
-			</tr>
-			<tr>
-				<td rowspan="2">
-					<input type="submit" value="Send Message">
-				</td>
-			</tr>
-		</table>
+		</div>
+			<input style="background: pink; color: white"type="submit" value="Send Message">
 	</form>
 
 </body>
